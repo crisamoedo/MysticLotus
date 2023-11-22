@@ -8,23 +8,99 @@
 
 /* Begin PBXBuildFile section */
 		861079AB2AF0E5F80056EE0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861079AA2AF0E5F80056EE0B /* AppDelegate.swift */; };
-		861079AD2AF0E5F80056EE0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861079AC2AF0E5F80056EE0B /* SceneDelegate.swift */; };
-		861079AF2AF0E5F80056EE0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861079AE2AF0E5F80056EE0B /* ViewController.swift */; };
-		861079B22AF0E5F80056EE0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861079B02AF0E5F80056EE0B /* Main.storyboard */; };
 		861079B42AF0E5FA0056EE0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 861079B32AF0E5FA0056EE0B /* Assets.xcassets */; };
 		861079B72AF0E5FA0056EE0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861079B52AF0E5FA0056EE0B /* LaunchScreen.storyboard */; };
 		861079C02AF0E6A80056EE0B /* ScryfallKit in Frameworks */ = {isa = PBXBuildFile; productRef = 861079BF2AF0E6A80056EE0B /* ScryfallKit */; };
+		862086AD2B0C99E2001D3D39 /* Rulings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862086AC2B0C99E2001D3D39 /* Rulings.swift */; };
+		862086CF2B0CFC30001D3D39 /* DetailTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862086CE2B0CFC30001D3D39 /* DetailTitles.swift */; };
+		862086D12B0D0334001D3D39 /* MLSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862086D02B0D0334001D3D39 /* MLSet.swift */; };
+		862086D32B0D09D8001D3D39 /* SetListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862086D22B0D09D8001D3D39 /* SetListUseCase.swift */; };
+		862086D62B0E1BFE001D3D39 /* SetCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862086D52B0E1BFE001D3D39 /* SetCardCell.xib */; };
+		862086D82B0E1C28001D3D39 /* SetCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862086D72B0E1C28001D3D39 /* SetCardCell.swift */; };
+		862DC4412B0E5CEF00D06C34 /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862DC4402B0E5CEF00D06C34 /* Fields.swift */; };
+		86A220A12B039A7100CF1DF6 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A220A02B039A7100CF1DF6 /* CardCell.xib */; };
+		86A220A32B039FCA00CF1DF6 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220A22B039FCA00CF1DF6 /* CardCell.swift */; };
+		86A220A62B03AA5200CF1DF6 /* CardDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A220A52B03AA5200CF1DF6 /* CardDetailView.xib */; };
+		86A220A82B03AA8300CF1DF6 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220A72B03AA8300CF1DF6 /* CardDetailViewController.swift */; };
+		86A220AB2B04AAFB00CF1DF6 /* DataCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A220AA2B04AAFB00CF1DF6 /* DataCardCell.xib */; };
+		86A220AD2B04AB0F00CF1DF6 /* DataCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220AC2B04AB0F00CF1DF6 /* DataCardCell.swift */; };
+		86A220AF2B04B71300CF1DF6 /* SetDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A220AE2B04B71300CF1DF6 /* SetDataCell.xib */; };
+		86A220B12B04B80100CF1DF6 /* SetDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220B02B04B80100CF1DF6 /* SetDataCell.swift */; };
+		86A220B32B04B8C100CF1DF6 /* SetListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A220B22B04B8C100CF1DF6 /* SetListView.xib */; };
+		86A220B52B04B9C700CF1DF6 /* SetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220B42B04B9C700CF1DF6 /* SetListViewController.swift */; };
+		86A220B72B050B4000CF1DF6 /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220B62B050B4000CF1DF6 /* CardDetailViewModel.swift */; };
+		86A220BC2B050D0800CF1DF6 /* SetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220BB2B050D0800CF1DF6 /* SetListViewModel.swift */; };
+		86A220BE2B050D1E00CF1DF6 /* SetListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220BD2B050D1E00CF1DF6 /* SetListCoordinator.swift */; };
+		86A220C12B05112500CF1DF6 /* SelectedSetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A220C02B05112500CF1DF6 /* SelectedSetView.xib */; };
+		86A220C32B0513A900CF1DF6 /* SetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220C22B0513A900CF1DF6 /* SetDetailViewController.swift */; };
+		86A220C52B0513C100CF1DF6 /* SelectedSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220C42B0513C100CF1DF6 /* SelectedSetViewModel.swift */; };
+		86A220C72B05142600CF1DF6 /* SelectedSetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220C62B05142600CF1DF6 /* SelectedSetCoordinator.swift */; };
+		86A220CA2B05196000CF1DF6 /* MLCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A220C92B05196000CF1DF6 /* MLCard.swift */; };
+		86A7F10E2AFBB67B008F7D6D /* SearchDataCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F10D2AFBB67B008F7D6D /* SearchDataCardViewController.swift */; };
+		86A7F1102AFBBE0D008F7D6D /* DataCardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F10F2AFBBE0D008F7D6D /* DataCardRepository.swift */; };
+		86A7F1122AFBBE38008F7D6D /* GetDataCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F1112AFBBE38008F7D6D /* GetDataCardUseCase.swift */; };
+		86A7F1142AFBBE4D008F7D6D /* SearchDataCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F1132AFBBE4D008F7D6D /* SearchDataCardViewModel.swift */; };
+		86A7F11E2B022A25008F7D6D /* RandomCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A7F11D2B022A25008F7D6D /* RandomCardView.xib */; };
+		86A7F1202B022A45008F7D6D /* SearchDataCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86A7F11F2B022A45008F7D6D /* SearchDataCardView.xib */; };
+		86A7F1242B0231C2008F7D6D /* RandomCardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F1232B0231C2008F7D6D /* RandomCardCoordinator.swift */; };
+		86A7F1262B0231F4008F7D6D /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F1252B0231F4008F7D6D /* Assembly.swift */; };
+		86A7F1282B023A4E008F7D6D /* CardDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F1272B023A4E008F7D6D /* CardDetailCoordinator.swift */; };
+		86A7F12A2B024689008F7D6D /* SearchDataCardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F1292B024689008F7D6D /* SearchDataCardCoordinator.swift */; };
+		86A7F12C2B027D41008F7D6D /* RandomCardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F12B2B027D41008F7D6D /* RandomCardRepository.swift */; };
+		86A7F1302B027D7E008F7D6D /* RandomCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F12D2B027D7D008F7D6D /* RandomCardViewModel.swift */; };
+		86A7F1312B027D7E008F7D6D /* GetRandomCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F12E2B027D7D008F7D6D /* GetRandomCardUseCase.swift */; };
+		86A7F1322B027D7E008F7D6D /* RandomCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A7F12F2B027D7E008F7D6D /* RandomCardViewController.swift */; };
+		86C036912B078B7200425C6B /* UITextField+findImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C036902B078B7200425C6B /* UITextField+findImage.swift */; };
+		86C036942B0791E000425C6B /* SetDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C036932B0791E000425C6B /* SetDataRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		861079A72AF0E5F80056EE0B /* MysticLotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MysticLotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		861079AA2AF0E5F80056EE0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		861079AC2AF0E5F80056EE0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		861079AE2AF0E5F80056EE0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		861079B12AF0E5F80056EE0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		861079B32AF0E5FA0056EE0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		861079B62AF0E5FA0056EE0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		861079B82AF0E5FA0056EE0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862086AC2B0C99E2001D3D39 /* Rulings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rulings.swift; sourceTree = "<group>"; };
+		862086CE2B0CFC30001D3D39 /* DetailTitles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitles.swift; sourceTree = "<group>"; };
+		862086D02B0D0334001D3D39 /* MLSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLSet.swift; sourceTree = "<group>"; };
+		862086D22B0D09D8001D3D39 /* SetListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListUseCase.swift; sourceTree = "<group>"; };
+		862086D52B0E1BFE001D3D39 /* SetCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetCardCell.xib; sourceTree = "<group>"; };
+		862086D72B0E1C28001D3D39 /* SetCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardCell.swift; sourceTree = "<group>"; };
+		862DC4402B0E5CEF00D06C34 /* Fields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
+		86A220A02B039A7100CF1DF6 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		86A220A22B039FCA00CF1DF6 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		86A220A52B03AA5200CF1DF6 /* CardDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailView.xib; sourceTree = "<group>"; };
+		86A220A72B03AA8300CF1DF6 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		86A220AA2B04AAFB00CF1DF6 /* DataCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataCardCell.xib; sourceTree = "<group>"; };
+		86A220AC2B04AB0F00CF1DF6 /* DataCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCardCell.swift; sourceTree = "<group>"; };
+		86A220AE2B04B71300CF1DF6 /* SetDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetDataCell.xib; sourceTree = "<group>"; };
+		86A220B02B04B80100CF1DF6 /* SetDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDataCell.swift; sourceTree = "<group>"; };
+		86A220B22B04B8C100CF1DF6 /* SetListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetListView.xib; sourceTree = "<group>"; };
+		86A220B42B04B9C700CF1DF6 /* SetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListViewController.swift; sourceTree = "<group>"; };
+		86A220B62B050B4000CF1DF6 /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
+		86A220BB2B050D0800CF1DF6 /* SetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListViewModel.swift; sourceTree = "<group>"; };
+		86A220BD2B050D1E00CF1DF6 /* SetListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListCoordinator.swift; sourceTree = "<group>"; };
+		86A220C02B05112500CF1DF6 /* SelectedSetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedSetView.xib; sourceTree = "<group>"; };
+		86A220C22B0513A900CF1DF6 /* SetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDetailViewController.swift; sourceTree = "<group>"; };
+		86A220C42B0513C100CF1DF6 /* SelectedSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedSetViewModel.swift; sourceTree = "<group>"; };
+		86A220C62B05142600CF1DF6 /* SelectedSetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedSetCoordinator.swift; sourceTree = "<group>"; };
+		86A220C92B05196000CF1DF6 /* MLCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLCard.swift; sourceTree = "<group>"; };
+		86A7F10D2AFBB67B008F7D6D /* SearchDataCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataCardViewController.swift; sourceTree = "<group>"; };
+		86A7F10F2AFBBE0D008F7D6D /* DataCardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCardRepository.swift; sourceTree = "<group>"; };
+		86A7F1112AFBBE38008F7D6D /* GetDataCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataCardUseCase.swift; sourceTree = "<group>"; };
+		86A7F1132AFBBE4D008F7D6D /* SearchDataCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataCardViewModel.swift; sourceTree = "<group>"; };
+		86A7F11D2B022A25008F7D6D /* RandomCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RandomCardView.xib; sourceTree = "<group>"; };
+		86A7F11F2B022A45008F7D6D /* SearchDataCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchDataCardView.xib; sourceTree = "<group>"; };
+		86A7F1232B0231C2008F7D6D /* RandomCardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomCardCoordinator.swift; sourceTree = "<group>"; };
+		86A7F1252B0231F4008F7D6D /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		86A7F1272B023A4E008F7D6D /* CardDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailCoordinator.swift; sourceTree = "<group>"; };
+		86A7F1292B024689008F7D6D /* SearchDataCardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataCardCoordinator.swift; sourceTree = "<group>"; };
+		86A7F12B2B027D41008F7D6D /* RandomCardRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCardRepository.swift; sourceTree = "<group>"; };
+		86A7F12D2B027D7D008F7D6D /* RandomCardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCardViewModel.swift; sourceTree = "<group>"; };
+		86A7F12E2B027D7D008F7D6D /* GetRandomCardUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRandomCardUseCase.swift; sourceTree = "<group>"; };
+		86A7F12F2B027D7E008F7D6D /* RandomCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomCardViewController.swift; sourceTree = "<group>"; };
+		86C036902B078B7200425C6B /* UITextField+findImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+findImage.swift"; sourceTree = "<group>"; };
+		86C036932B0791E000425C6B /* SetDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetDataRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +134,165 @@
 		861079A92AF0E5F80056EE0B /* MysticLotus */ = {
 			isa = PBXGroup;
 			children = (
+				86A7F1252B0231F4008F7D6D /* Assembly.swift */,
 				861079AA2AF0E5F80056EE0B /* AppDelegate.swift */,
-				861079AC2AF0E5F80056EE0B /* SceneDelegate.swift */,
-				861079AE2AF0E5F80056EE0B /* ViewController.swift */,
-				861079B02AF0E5F80056EE0B /* Main.storyboard */,
 				861079B32AF0E5FA0056EE0B /* Assets.xcassets */,
 				861079B52AF0E5FA0056EE0B /* LaunchScreen.storyboard */,
 				861079B82AF0E5FA0056EE0B /* Info.plist */,
+				86C036922B07910100425C6B /* Repositories */,
+				86C0368F2B078B3F00425C6B /* Extensions */,
+				86A220BA2B050C3A00CF1DF6 /* Common */,
+				868034582AF8E94100155B93 /* Scenes */,
 			);
 			path = MysticLotus;
+			sourceTree = "<group>";
+		};
+		862086D42B0E1BC5001D3D39 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				862086D52B0E1BFE001D3D39 /* SetCardCell.xib */,
+				862086D72B0E1C28001D3D39 /* SetCardCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		868034582AF8E94100155B93 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				86A220BF2B050EAE00CF1DF6 /* SelectedSetDetail */,
+				86A220A92B04AA5C00CF1DF6 /* SetData */,
+				86A220A42B03AA1800CF1DF6 /* CardDetail */,
+				86A7F10C2AFBB635008F7D6D /* SearchDataCard */,
+				868034632AF93FDA00155B93 /* RandomCard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		868034632AF93FDA00155B93 /* RandomCard */ = {
+			isa = PBXGroup;
+			children = (
+				86A7F12B2B027D41008F7D6D /* RandomCardRepository.swift */,
+				86A7F12E2B027D7D008F7D6D /* GetRandomCardUseCase.swift */,
+				86A7F12D2B027D7D008F7D6D /* RandomCardViewModel.swift */,
+				86A7F12F2B027D7E008F7D6D /* RandomCardViewController.swift */,
+				86A7F1232B0231C2008F7D6D /* RandomCardCoordinator.swift */,
+				86A7F11D2B022A25008F7D6D /* RandomCardView.xib */,
+			);
+			path = RandomCard;
+			sourceTree = "<group>";
+		};
+		86A2209F2B039A4600CF1DF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86A220A02B039A7100CF1DF6 /* CardCell.xib */,
+				86A220A22B039FCA00CF1DF6 /* CardCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		86A220A42B03AA1800CF1DF6 /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				86A220B62B050B4000CF1DF6 /* CardDetailViewModel.swift */,
+				86A220A72B03AA8300CF1DF6 /* CardDetailViewController.swift */,
+				86A7F1272B023A4E008F7D6D /* CardDetailCoordinator.swift */,
+				86A220A52B03AA5200CF1DF6 /* CardDetailView.xib */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		86A220A92B04AA5C00CF1DF6 /* SetData */ = {
+			isa = PBXGroup;
+			children = (
+				862086D22B0D09D8001D3D39 /* SetListUseCase.swift */,
+				86A220BB2B050D0800CF1DF6 /* SetListViewModel.swift */,
+				86A220BD2B050D1E00CF1DF6 /* SetListCoordinator.swift */,
+				86A220B42B04B9C700CF1DF6 /* SetListViewController.swift */,
+				86A220B22B04B8C100CF1DF6 /* SetListView.xib */,
+				86A220B82B050B7300CF1DF6 /* Cell */,
+			);
+			path = SetData;
+			sourceTree = "<group>";
+		};
+		86A220B82B050B7300CF1DF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86A220B02B04B80100CF1DF6 /* SetDataCell.swift */,
+				86A220AE2B04B71300CF1DF6 /* SetDataCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		86A220B92B050B9A00CF1DF6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86A220AC2B04AB0F00CF1DF6 /* DataCardCell.swift */,
+				86A220AA2B04AAFB00CF1DF6 /* DataCardCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		86A220BA2B050C3A00CF1DF6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				86A220C82B05194800CF1DF6 /* Models */,
+				86A220B92B050B9A00CF1DF6 /* Cell */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		86A220BF2B050EAE00CF1DF6 /* SelectedSetDetail */ = {
+			isa = PBXGroup;
+			children = (
+				86A220C42B0513C100CF1DF6 /* SelectedSetViewModel.swift */,
+				86A220C22B0513A900CF1DF6 /* SetDetailViewController.swift */,
+				86A220C62B05142600CF1DF6 /* SelectedSetCoordinator.swift */,
+				86A220C02B05112500CF1DF6 /* SelectedSetView.xib */,
+				862086D42B0E1BC5001D3D39 /* Cell */,
+			);
+			path = SelectedSetDetail;
+			sourceTree = "<group>";
+		};
+		86A220C82B05194800CF1DF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86A220C92B05196000CF1DF6 /* MLCard.swift */,
+				862086AC2B0C99E2001D3D39 /* Rulings.swift */,
+				862086CE2B0CFC30001D3D39 /* DetailTitles.swift */,
+				862086D02B0D0334001D3D39 /* MLSet.swift */,
+				862DC4402B0E5CEF00D06C34 /* Fields.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86A7F10C2AFBB635008F7D6D /* SearchDataCard */ = {
+			isa = PBXGroup;
+			children = (
+				86A7F1112AFBBE38008F7D6D /* GetDataCardUseCase.swift */,
+				86A7F1132AFBBE4D008F7D6D /* SearchDataCardViewModel.swift */,
+				86A7F10D2AFBB67B008F7D6D /* SearchDataCardViewController.swift */,
+				86A7F1292B024689008F7D6D /* SearchDataCardCoordinator.swift */,
+				86A7F11F2B022A45008F7D6D /* SearchDataCardView.xib */,
+				86A2209F2B039A4600CF1DF6 /* Cell */,
+			);
+			path = SearchDataCard;
+			sourceTree = "<group>";
+		};
+		86C0368F2B078B3F00425C6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				86C036902B078B7200425C6B /* UITextField+findImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		86C036922B07910100425C6B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				86A7F10F2AFBBE0D008F7D6D /* DataCardRepository.swift */,
+				86C036932B0791E000425C6B /* SetDataRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +360,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				861079B72AF0E5FA0056EE0B /* LaunchScreen.storyboard in Resources */,
+				86A7F1202B022A45008F7D6D /* SearchDataCardView.xib in Resources */,
+				86A220C12B05112500CF1DF6 /* SelectedSetView.xib in Resources */,
+				86A220B32B04B8C100CF1DF6 /* SetListView.xib in Resources */,
+				86A220A12B039A7100CF1DF6 /* CardCell.xib in Resources */,
+				86A220A62B03AA5200CF1DF6 /* CardDetailView.xib in Resources */,
+				86A7F11E2B022A25008F7D6D /* RandomCardView.xib in Resources */,
 				861079B42AF0E5FA0056EE0B /* Assets.xcassets in Resources */,
-				861079B22AF0E5F80056EE0B /* Main.storyboard in Resources */,
+				86A220AF2B04B71300CF1DF6 /* SetDataCell.xib in Resources */,
+				862086D62B0E1BFE001D3D39 /* SetCardCell.xib in Resources */,
+				86A220AB2B04AAFB00CF1DF6 /* DataCardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,23 +380,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				861079AF2AF0E5F80056EE0B /* ViewController.swift in Sources */,
+				862DC4412B0E5CEF00D06C34 /* Fields.swift in Sources */,
+				86A7F10E2AFBB67B008F7D6D /* SearchDataCardViewController.swift in Sources */,
+				86A220AD2B04AB0F00CF1DF6 /* DataCardCell.swift in Sources */,
+				86A7F1242B0231C2008F7D6D /* RandomCardCoordinator.swift in Sources */,
+				86A220BE2B050D1E00CF1DF6 /* SetListCoordinator.swift in Sources */,
+				862086AD2B0C99E2001D3D39 /* Rulings.swift in Sources */,
+				86A7F1102AFBBE0D008F7D6D /* DataCardRepository.swift in Sources */,
+				86A7F1122AFBBE38008F7D6D /* GetDataCardUseCase.swift in Sources */,
+				86A220B12B04B80100CF1DF6 /* SetDataCell.swift in Sources */,
+				862086CF2B0CFC30001D3D39 /* DetailTitles.swift in Sources */,
+				86A7F1282B023A4E008F7D6D /* CardDetailCoordinator.swift in Sources */,
+				86A220C72B05142600CF1DF6 /* SelectedSetCoordinator.swift in Sources */,
+				86A220C52B0513C100CF1DF6 /* SelectedSetViewModel.swift in Sources */,
+				86A7F1312B027D7E008F7D6D /* GetRandomCardUseCase.swift in Sources */,
 				861079AB2AF0E5F80056EE0B /* AppDelegate.swift in Sources */,
-				861079AD2AF0E5F80056EE0B /* SceneDelegate.swift in Sources */,
+				86A220CA2B05196000CF1DF6 /* MLCard.swift in Sources */,
+				86A220A32B039FCA00CF1DF6 /* CardCell.swift in Sources */,
+				86A220B72B050B4000CF1DF6 /* CardDetailViewModel.swift in Sources */,
+				86A7F1322B027D7E008F7D6D /* RandomCardViewController.swift in Sources */,
+				862086D82B0E1C28001D3D39 /* SetCardCell.swift in Sources */,
+				86A7F12C2B027D41008F7D6D /* RandomCardRepository.swift in Sources */,
+				862086D12B0D0334001D3D39 /* MLSet.swift in Sources */,
+				86A220BC2B050D0800CF1DF6 /* SetListViewModel.swift in Sources */,
+				86A220A82B03AA8300CF1DF6 /* CardDetailViewController.swift in Sources */,
+				86A220B52B04B9C700CF1DF6 /* SetListViewController.swift in Sources */,
+				86A7F12A2B024689008F7D6D /* SearchDataCardCoordinator.swift in Sources */,
+				86A220C32B0513A900CF1DF6 /* SetDetailViewController.swift in Sources */,
+				862086D32B0D09D8001D3D39 /* SetListUseCase.swift in Sources */,
+				86C036912B078B7200425C6B /* UITextField+findImage.swift in Sources */,
+				86A7F1262B0231F4008F7D6D /* Assembly.swift in Sources */,
+				86C036942B0791E000425C6B /* SetDataRepository.swift in Sources */,
+				86A7F1302B027D7E008F7D6D /* RandomCardViewModel.swift in Sources */,
+				86A7F1142AFBBE4D008F7D6D /* SearchDataCardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		861079B02AF0E5F80056EE0B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				861079B12AF0E5F80056EE0B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		861079B52AF0E5FA0056EE0B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -305,7 +561,6 @@
 				INFOPLIST_FILE = MysticLotus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
@@ -334,7 +589,6 @@
 				INFOPLIST_FILE = MysticLotus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;

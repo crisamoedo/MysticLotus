@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RandomCardViewController" customModule="MysticLotus" customModuleProvider="target">
+            <connections>
+                <outlet property="cardNameButton" destination="pFr-ep-65R" id="mjg-2l-F7d"/>
+                <outlet property="randomCardButton" destination="OgJ-hB-dKi" id="gwy-Ty-0kS"/>
+                <outlet property="view" destination="oR0-GG-R7S" id="LXg-Pj-gYE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oR0-GG-R7S">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgJ-hB-dKi">
+                    <rect key="frame" x="76" y="215" width="241" height="34.333333333333343"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Get random card"/>
+                    <connections>
+                        <action selector="getRandomCardButton:" destination="-1" eventType="touchUpInside" id="9t9-gB-RFx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-ep-65R">
+                    <rect key="frame" x="98" y="367" width="198" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="RANDOM CARD NAME"/>
+                    <connections>
+                        <action selector="cardNameButtonAction:" destination="-1" eventType="touchUpInside" id="Guz-9w-pdG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="4SB-St-0JO"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OgJ-hB-dKi" firstAttribute="leading" secondItem="4SB-St-0JO" secondAttribute="leading" constant="76" id="Vw4-RI-AO3"/>
+                <constraint firstItem="OgJ-hB-dKi" firstAttribute="top" secondItem="4SB-St-0JO" secondAttribute="top" constant="156" id="a0s-g9-OqJ"/>
+                <constraint firstItem="4SB-St-0JO" firstAttribute="trailing" secondItem="OgJ-hB-dKi" secondAttribute="trailing" constant="76" id="jHK-yf-nMv"/>
+            </constraints>
+            <point key="canvasLocation" x="-561.06870229007632" y="-355.63380281690144"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

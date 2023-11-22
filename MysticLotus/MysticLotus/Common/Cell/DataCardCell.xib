@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="SHF-Py-sNu" customClass="DataCardCell" customModule="MysticLotus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="800" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data type" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYJ-ii-mro">
+                    <rect key="frame" x="0.0" y="0.0" width="108" height="200"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MLCard" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDJ-Pr-8UF">
+                    <rect key="frame" x="717.66666666666663" y="0.0" width="82.333333333333371" height="200"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="5ip-YV-42P"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lYJ-ii-mro" firstAttribute="top" secondItem="SHF-Py-sNu" secondAttribute="top" id="7Hy-gi-juI"/>
+                <constraint firstItem="uDJ-Pr-8UF" firstAttribute="top" secondItem="SHF-Py-sNu" secondAttribute="top" id="HJr-ih-vAD"/>
+                <constraint firstAttribute="bottom" secondItem="lYJ-ii-mro" secondAttribute="bottom" id="bkN-0J-9qE"/>
+                <constraint firstAttribute="bottom" secondItem="uDJ-Pr-8UF" secondAttribute="bottom" id="qfg-tU-eVG"/>
+                <constraint firstItem="uDJ-Pr-8UF" firstAttribute="trailing" secondItem="5ip-YV-42P" secondAttribute="trailing" id="ucU-fH-ype"/>
+                <constraint firstItem="lYJ-ii-mro" firstAttribute="leading" secondItem="5ip-YV-42P" secondAttribute="leading" id="wTX-BG-mr6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dataCardLabel" destination="uDJ-Pr-8UF" id="q5u-CI-kMo"/>
+                <outlet property="typeDataLabel" destination="lYJ-ii-mro" id="PRy-g1-rg3"/>
+            </connections>
+            <point key="canvasLocation" x="48.854961832061065" y="225.35211267605635"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
