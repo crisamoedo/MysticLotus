@@ -9,17 +9,16 @@ import Foundation
 import ScryfallKit
 import Combine
 
-protocol GetSetUseCaseProtocol {
-    var setListRepository: SetDataRepository?
+protocol SetListUseCaseProtocol {
+    var setListRepository: SetDataRepositoryProtocol?
     { get }
-    
     func getSets() -> AnyPublisher<[MLSet], Never>
 }
 
-class GetSetUseCase: GetSetUseCaseProtocol {
-    var setListRepository: SetDataRepository?
+class SetListUseCase: SetListUseCaseProtocol {
+    var setListRepository: SetDataRepositoryProtocol?
     
-    init(setListRepository: SetDataRepository?) {
+    init(setListRepository: SetDataRepositoryProtocol?) {
         self.setListRepository = setListRepository
     }
     
@@ -28,8 +27,7 @@ class GetSetUseCase: GetSetUseCaseProtocol {
                 setListRepository else {
             return Just([]).eraseToAnyPublisher()
         }
-        return
-        setListRepository
+        return setListRepository
             .getSets()
             .eraseToAnyPublisher()
             

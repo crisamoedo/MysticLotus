@@ -27,8 +27,8 @@ class SearchDataCardCoordinator: SearchDataCardCoordinatorProtocol {
     }
     
     func build() -> UIViewController {
-        let searchDataCardRepository = Assembly.shared.searchDataCardRepository
-        let searchDataCardUseCase = GetDataCardUseCase(searchDataCardRepository: searchDataCardRepository)
+        let dataCardRepository = Assembly.shared.dataCardRepository
+        let searchDataCardUseCase = GetDataCardUseCase(searchDataCardRepository: dataCardRepository)
         let dataCardViewController = SearchDataCardViewController()
         let searchDataCardViewModel = SearchDataCardViewModel(
             dataCardCoordinator: self,

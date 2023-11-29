@@ -1,34 +1,32 @@
 //
-//  SearchDataCardRepository.swift
+//  SetDetailRepository.swift
 //  MysticLotus
 //
-//  Created by Cristina Amoedo Fragueiro on 8/11/23.
+//  Created by Cristina Amoedo Fragueiro on 28/11/23.
 //
 
 import ScryfallKit
 import Combine
 
-protocol DataCardRepositoryProtocol {
-    func searchCards(searchText: String) -> AnyPublisher<[MLCard], Never>
+protocol SetDetailRepositoryProtocol {
+    func getCardsSet() -> AnyPublisher<[MLCard], Never>
 }
 
-class DataCardRepository: DataCardRepositoryProtocol{
-    func searchCards(searchText: String) -> AnyPublisher<[MLCard], Never> {
+class SetDetailRepository: SetDetailRepositoryProtocol {
+    func getCardsSet() -> AnyPublisher<[MLCard], Never> {
         return Future { promise in
-            ScryfallClient().searchCards(query: searchText) { result in
+            ScryfallClient().searchCards(filters: [.set("")]) { result in
                 switch result {
                 case .success(let cards):
                     let mappedCards = cards.data.map { card in
                         return MLCard(id: "\(card.id)", cardImageUris: card.imageUris,
                                       name: card.name,
-                                      manaCost: card.manaCost?.filtrarNumeros(),
+                                      manaCost: card.manaCost,
                                       typeLine: card.typeLine,
                                       flavorText: card.flavorText,
                                       artist: card.artist,
                                       setName: card.setName)
-                        
                     }
-                   
                     promise(.success(mappedCards))
                 case .failure:
                     promise(.success([]))

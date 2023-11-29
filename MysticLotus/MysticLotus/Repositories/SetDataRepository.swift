@@ -19,7 +19,7 @@ class SetDataRepository: SetDataRepositoryProtocol {
                 switch result {
                 case .success(let sets):
                     let mappedSets = sets.data.map { set in
-                        return MLSet(name: set.name)
+                        return MLSet(id: "\(set.id)", name: set.name, cardCount: set.cardCount)
                     }
                     promise(.success(mappedSets))
                 case .failure:

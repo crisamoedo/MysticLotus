@@ -16,7 +16,6 @@ protocol SetListCoordinatorProtocol {
 // Singleton
 
 class SetListCoordinator: SetListCoordinatorProtocol {
-    
     weak var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController?) {
@@ -28,23 +27,21 @@ class SetListCoordinator: SetListCoordinatorProtocol {
     }
     
     func build() -> UIViewController {
-//        let setListRepository = Assembly.shared.setListRepository
-//        let setListUseCase = GetSetUseCase(setListRepository: setListRepository)
-//        let setListViewController = SetListViewController()
-//        let setListViewModel = SetListViewModel(
-//            setListCoordinator: self,
-//            setListUseCase: setListUseCase,
-//            view: setListViewController)
-//        setListViewController.viewModel = setListViewModel
-//        
-//        return setListViewController
-        return UIViewController()
+        let setDataRepository = Assembly.shared.setDataRepository
+        let setListUseCase = SetListUseCase(setListRepository: setDataRepository)
+        let setListViewController = SetListViewController()
+        let setListViewModel = SetListViewModel(
+            setListCoordinator: self,
+            setListUseCase: setListUseCase,
+            view: setListViewController)
+        setListViewController.viewModel = setListViewModel
+        
+        return setListViewController
     }
     
-    //FALTA IMPLEMENTAR LAS CLASES DE LA LISTA DE CARTAS DE UN SET
     func goToSetDetail(with selectedSet: MLSet) {
-//        let setDetailCoordinator = SetDetailCoordinator(navigationController: navigationController, set: selectedSet)
-//        setDetailCoordinator.start()
+        let setDetailCoordinator = SetDetailCoordinator(navigationController: navigationController, set: selectedSet)
+                setDetailCoordinator.start()
     }
 }
 

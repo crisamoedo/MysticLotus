@@ -13,7 +13,6 @@ import Combine
 protocol SearchDataCardViewModelProtocol {
     var view: SearchDataCardViewControllerProtocol? { get }
     var searchedCards: [MLCard] {get}
-
     func didTapOnSearchCards(searchText: String)
     func didSelectCard(_ selectedCardIndex: Int)
 }
@@ -23,7 +22,7 @@ class SearchDataCardViewModel: SearchDataCardViewModelProtocol {
     var view: SearchDataCardViewControllerProtocol?
     var searchedCards: [MLCard] = []
     
-    private let dataCardCoordinator : SearchDataCardCoordinatorProtocol
+    private let dataCardCoordinator: SearchDataCardCoordinatorProtocol
     private let searchDataCardUseCase: GetDataCardUseCaseProtocol?
     private var cancellables: [AnyCancellable] = []
     
@@ -33,6 +32,7 @@ class SearchDataCardViewModel: SearchDataCardViewModelProtocol {
         self.dataCardCoordinator = dataCardCoordinator
         self.searchDataCardUseCase = searchDataCardUseCase
         self.view = view
+        
     }
         
     func didTapOnSearchCards(searchText: String) {
@@ -46,7 +46,8 @@ class SearchDataCardViewModel: SearchDataCardViewModelProtocol {
     }
     
     func didSelectCard(_ selectedCardIndex: Int) {
-        dataCardCoordinator.goToCardDetail(with: searchedCards[selectedCardIndex])
+        dataCardCoordinator
+            .goToCardDetail(with: searchedCards[selectedCardIndex])
     }
 }
 

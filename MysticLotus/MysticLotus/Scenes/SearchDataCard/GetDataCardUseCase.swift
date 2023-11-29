@@ -10,16 +10,16 @@ import ScryfallKit
 import Combine
 
 protocol GetDataCardUseCaseProtocol {
-    var searchDataCardRepository: CardDataRepositoryProtocol?
+    var searchDataCardRepository: DataCardRepositoryProtocol?
     { get }
     
     func searchCards(searchText: String) -> AnyPublisher<[MLCard], Never>
 }
 
 class GetDataCardUseCase: GetDataCardUseCaseProtocol {
-    var searchDataCardRepository: CardDataRepositoryProtocol?
+    var searchDataCardRepository: DataCardRepositoryProtocol?
     
-    init(searchDataCardRepository: CardDataRepositoryProtocol?) {
+    init(searchDataCardRepository: DataCardRepositoryProtocol?) {
         self.searchDataCardRepository = searchDataCardRepository
     }
     
@@ -28,7 +28,8 @@ class GetDataCardUseCase: GetDataCardUseCaseProtocol {
                 searchDataCardRepository else {
             return Just([]).eraseToAnyPublisher()
         }
-        return searchDataCardRepository.searchCards(searchText: searchText)
+        return searchDataCardRepository
+            .searchCards(searchText: searchText)
             .eraseToAnyPublisher()
     }
 }

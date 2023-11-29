@@ -15,12 +15,23 @@ class Assembly {
         RandomCardRepository()
     }()
 
-    public lazy var searchDataCardRepository: CardDataRepositoryProtocol = {
-        SearchDataCardRepository()
+    public lazy var dataCardRepository: DataCardRepositoryProtocol = {
+        DataCardRepository()
     }()
     
-    public lazy var setListRepository: SetDataRepositoryProtocol = {
+    public lazy var cardRulingsRepository: CardRulingsRepositoryProtocol = {
+        CardRulingsRepository()
+    }()
+    
+    public lazy var setDataRepository: 
+        SetDataRepositoryProtocol = {
         SetDataRepository()
     }()
+    
+    public lazy var setDetailRepository:
+        SetDetailRepositoryProtocol = {
+        SetDetailRepository()
+    }()
+    
     private init() {}
 }

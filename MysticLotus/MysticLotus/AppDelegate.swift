@@ -9,7 +9,7 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
     
     var window: UIWindow?
     
@@ -25,18 +25,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         randomCardNavigationController.tabBarItem.image = UIImage(systemName: "circle.hexagonpath")
         
         let cardDataNavigationController = UINavigationController()
-        let searchCardCoordinator =
-        SearchDataCardCoordinator(navigationController: cardDataNavigationController)
+        let searchCardCoordinator = SearchDataCardCoordinator(navigationController: cardDataNavigationController)
         cardDataNavigationController.setViewControllers(
             [searchCardCoordinator.build()], animated: false)
         cardDataNavigationController.tabBarItem.title = "Search card"
         cardDataNavigationController.tabBarItem.image = UIImage(systemName: "plus.magnifyingglass")
         
+        let setListNavigationController = UINavigationController()
+        let setListCoordinator = SetListCoordinator(navigationController: setListNavigationController)
+        setListNavigationController.setViewControllers(
+            [setListCoordinator.build()], animated: false)
+        setListNavigationController.tabBarItem.title = "Set List"
+        setListNavigationController.tabBarItem.image = UIImage(systemName: "list.bullet.circle")
+        
         let tabBar = UITabBarController()
         
-        tabBar.setViewControllers([cardDataNavigationController, randomCardNavigationController], animated: false)
-        
-        
+        tabBar.setViewControllers([cardDataNavigationController, randomCardNavigationController, setListNavigationController], animated: false)
+
         window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
         

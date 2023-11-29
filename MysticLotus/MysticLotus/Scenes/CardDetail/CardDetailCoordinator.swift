@@ -27,9 +27,11 @@ class CardDetailCoordinator: CardDetailCoordinatorProtocol {
     }
     
     func build() -> UIViewController {
-        let viewController = CardDetailViewController()
-        let cardDetailViewModel = CardDetailViewModel(cardDetailCoordinator: self, view: viewController, card: card)
-        viewController.viewModel = cardDetailViewModel
-        return viewController
+        let cardDetailRepository = Assembly.shared.cardRulingsRepository
+        let cardDetailUseCase = CardDetailUseCase(cardDetailRepository: cardDetailRepository)
+        let cardDetailViewController = CardDetailViewController()
+        let cardDetailViewModel = CardDetailViewModel(cardDetailCoordinator: self, cardDetailUseCase: cardDetailUseCase, view: cardDetailViewController, card: card)
+        cardDetailViewController.viewModel = cardDetailViewModel
+        return cardDetailViewController
     }
 }

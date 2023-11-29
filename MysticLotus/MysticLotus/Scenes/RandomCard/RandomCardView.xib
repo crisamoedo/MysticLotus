@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RandomCardViewController" customModule="MysticLotus" customModuleProvider="target">
             <connections>
                 <outlet property="cardNameButton" destination="pFr-ep-65R" id="mjg-2l-F7d"/>
-                <outlet property="randomCardButton" destination="OgJ-hB-dKi" id="gwy-Ty-0kS"/>
                 <outlet property="view" destination="oR0-GG-R7S" id="LXg-Pj-gYE"/>
             </connections>
         </placeholder>
@@ -21,19 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgJ-hB-dKi">
-                    <rect key="frame" x="76" y="215" width="241" height="34.333333333333343"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Get random card"/>
-                    <connections>
-                        <action selector="getRandomCardButton:" destination="-1" eventType="touchUpInside" id="9t9-gB-RFx"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-ep-65R">
-                    <rect key="frame" x="98" y="367" width="198" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="RANDOM CARD NAME"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-ep-65R">
+                    <rect key="frame" x="20" y="419" width="353" height="14"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <buttonConfiguration key="configuration" style="plain" title="">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="strokeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="cardNameButtonAction:" destination="-1" eventType="touchUpInside" id="Guz-9w-pdG"/>
                     </connections>
@@ -42,9 +37,10 @@
             <viewLayoutGuide key="safeArea" id="4SB-St-0JO"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OgJ-hB-dKi" firstAttribute="leading" secondItem="4SB-St-0JO" secondAttribute="leading" constant="76" id="Vw4-RI-AO3"/>
-                <constraint firstItem="OgJ-hB-dKi" firstAttribute="top" secondItem="4SB-St-0JO" secondAttribute="top" constant="156" id="a0s-g9-OqJ"/>
-                <constraint firstItem="4SB-St-0JO" firstAttribute="trailing" secondItem="OgJ-hB-dKi" secondAttribute="trailing" constant="76" id="jHK-yf-nMv"/>
+                <constraint firstItem="pFr-ep-65R" firstAttribute="centerY" secondItem="oR0-GG-R7S" secondAttribute="centerY" id="MD7-e5-WqH"/>
+                <constraint firstItem="pFr-ep-65R" firstAttribute="centerX" secondItem="oR0-GG-R7S" secondAttribute="centerX" id="UYY-Id-Db7"/>
+                <constraint firstItem="pFr-ep-65R" firstAttribute="leading" secondItem="4SB-St-0JO" secondAttribute="leading" constant="20" id="nLx-D7-7oC"/>
+                <constraint firstItem="4SB-St-0JO" firstAttribute="trailing" secondItem="pFr-ep-65R" secondAttribute="trailing" constant="20" id="tJd-FN-h2h"/>
             </constraints>
             <point key="canvasLocation" x="-561.06870229007632" y="-355.63380281690144"/>
         </view>

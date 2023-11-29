@@ -7,7 +7,4 @@
 
 import Foundation
 
-struct Rulings : Decodable {
-    let publishedAt: String
-    let comment: String
-}
+

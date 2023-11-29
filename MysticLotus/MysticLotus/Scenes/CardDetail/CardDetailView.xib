@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="cardImage" destination="mnb-fQ-WQt" id="dlZ-co-xZv"/>
                 <outlet property="dataCardTable" destination="GUy-2e-TTJ" id="ODJ-HU-QDi"/>
-                <outlet property="nameCardLabel" destination="dkH-hv-vCk" id="U3h-8t-O1J"/>
                 <outlet property="view" destination="ifP-Xu-dEB" id="4An-ZH-vyZ"/>
             </connections>
         </placeholder>
@@ -22,27 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-2e-TTJ">
-                    <rect key="frame" x="0.0" y="262" width="393" height="556"/>
+                <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-2e-TTJ">
+                    <rect key="frame" x="0.0" y="316" width="393" height="502"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="556" id="h0f-Lq-s7l"/>
+                        <constraint firstAttribute="height" constant="502" id="NIU-09-MaK"/>
                     </constraints>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldm-kp-jip">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="262"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="261"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mnb-fQ-WQt">
-                            <rect key="frame" x="70" y="120" width="253" height="168"/>
+                            <rect key="frame" x="73" y="60" width="247" height="206"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkH-hv-vCk">
-                            <rect key="frame" x="110" y="66" width="173" height="46"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
@@ -51,7 +43,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="GUy-2e-TTJ" firstAttribute="trailing" secondItem="kNF-3r-wQO" secondAttribute="trailing" id="4Z3-lZ-uWW"/>
-                <constraint firstItem="GUy-2e-TTJ" firstAttribute="top" secondItem="Ldm-kp-jip" secondAttribute="bottom" id="FpJ-GX-dva"/>
+                <constraint firstItem="GUy-2e-TTJ" firstAttribute="top" secondItem="Ldm-kp-jip" secondAttribute="bottom" constant="55" id="FpJ-GX-dva"/>
                 <constraint firstItem="GUy-2e-TTJ" firstAttribute="trailing" secondItem="Ldm-kp-jip" secondAttribute="trailing" id="Fpp-Bw-b8O"/>
                 <constraint firstItem="GUy-2e-TTJ" firstAttribute="leading" secondItem="Ldm-kp-jip" secondAttribute="leading" id="REA-9R-WXj"/>
                 <constraint firstItem="Ldm-kp-jip" firstAttribute="top" secondItem="ifP-Xu-dEB" secondAttribute="top" id="V2l-Nr-N2a"/>

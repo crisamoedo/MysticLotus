@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetListViewController" customModule="MysticLotus" customModuleProvider="target">
             <connections>
+                <outlet property="numberOfCardsInSetLabel" destination="d4I-uq-DnF" id="Tgi-Un-HDl"/>
                 <outlet property="setListTable" destination="y2f-hc-ZZr" id="lNd-JC-0V4"/>
+                <outlet property="setNameLabel" destination="d1F-YO-vcn" id="iJN-lM-TJG"/>
                 <outlet property="view" destination="D0i-7l-RB7" id="xHo-lT-MmT"/>
             </connections>
         </placeholder>
@@ -20,42 +22,35 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4G-SX-cbb">
-                    <rect key="frame" x="16" y="71" width="361" height="85"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1F-YO-vcn">
-                            <rect key="frame" x="8" y="8" width="201" height="69"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nº Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4I-uq-DnF">
-                            <rect key="frame" x="217" y="0.0" width="69" height="85"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfk-BL-DiO">
-                            <rect key="frame" x="300" y="0.0" width="61" height="85"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2f-hc-ZZr">
-                    <rect key="frame" x="0.0" y="164" width="393" height="688"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1F-YO-vcn">
+                    <rect key="frame" x="15.000000000000004" y="89" width="47.333333333333343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2f-hc-ZZr">
+                    <rect key="frame" x="0.0" y="111.66666666666669" width="393" height="740.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4I-uq-DnF">
+                    <rect key="frame" x="322.33333333333331" y="89" width="55.666666666666686" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fs6-iP-K8V"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="y2f-hc-ZZr" firstAttribute="trailing" secondItem="fs6-iP-K8V" secondAttribute="trailing" id="M3O-G7-MPB"/>
+                <constraint firstItem="d1F-YO-vcn" firstAttribute="top" secondItem="fs6-iP-K8V" secondAttribute="top" constant="30" id="O5q-Am-DvX"/>
+                <constraint firstItem="y2f-hc-ZZr" firstAttribute="top" secondItem="d1F-YO-vcn" secondAttribute="bottom" constant="1.6666666666666714" id="TI7-1x-FTh"/>
+                <constraint firstAttribute="bottom" secondItem="y2f-hc-ZZr" secondAttribute="bottom" id="W0I-jx-FEF"/>
+                <constraint firstItem="d4I-uq-DnF" firstAttribute="top" secondItem="fs6-iP-K8V" secondAttribute="top" constant="30" id="a4o-ae-1D2"/>
+                <constraint firstItem="d1F-YO-vcn" firstAttribute="leading" secondItem="fs6-iP-K8V" secondAttribute="leading" constant="15" id="cRi-ZO-AXn"/>
+                <constraint firstItem="y2f-hc-ZZr" firstAttribute="leading" secondItem="fs6-iP-K8V" secondAttribute="leading" id="hYk-wD-tDu"/>
+                <constraint firstItem="fs6-iP-K8V" firstAttribute="trailing" secondItem="d4I-uq-DnF" secondAttribute="trailing" constant="15" id="s2p-hx-i0e"/>
+            </constraints>
             <point key="canvasLocation" x="49.618320610687022" y="-32.394366197183103"/>
         </view>
     </objects>

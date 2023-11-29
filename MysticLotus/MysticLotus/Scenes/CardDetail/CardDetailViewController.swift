@@ -8,6 +8,7 @@
 import UIKit
 
 protocol  CardDetailViewControllerProtocol {
+    func reloadTable()
 }
 
 class CardDetailViewController : UIViewController, UITableViewDataSource, UITableViewDelegate, CardDetailViewControllerProtocol {
@@ -15,7 +16,6 @@ class CardDetailViewController : UIViewController, UITableViewDataSource, UITabl
     var viewModel : CardDetailViewModelProtocol?
     
     @IBOutlet weak var dataCardTable: UITableView!
-    @IBOutlet weak var nameCardLabel: UILabel!
     @IBOutlet weak var cardImage: UIImageView!
     
     init() {
@@ -27,12 +27,23 @@ class CardDetailViewController : UIViewController, UITableViewDataSource, UITabl
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.viewDidLoad()
         dataCardTable.register(UINib(nibName: "DataCardCell", bundle: .main), forCellReuseIdentifier: "DataCardCell")
-        nameCardLabel.text = viewModel?.cardDetail.name
+        if let cardImageURL = viewModel?.cardDetail.cardImage {
+            if let url = URL(string: cardImageURL) {
+                DispatchQueue.global().async {
+                    if let data = try? Data(contentsOf: url),
+                       let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self.cardImage.image = image
+                        }
+                    }
+                }
+            }
+        }
         dataCardTable.delegate = self
         dataCardTable.dataSource = self
     }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel?.fieldsSections.count ?? 0
     }
@@ -49,9 +60,10 @@ class CardDetailViewController : UIViewController, UITableViewDataSource, UITabl
         }
         cellData.typeDataLabel.text = field.title
         cellData.dataCardLabel.text = field.value
-      
         return cellData
-        
+    }
+    func reloadTable(){
+        dataCardTable.reloadData()
     }
     
 }

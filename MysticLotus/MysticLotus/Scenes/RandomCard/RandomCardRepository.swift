@@ -12,13 +12,15 @@ class RandomCardRepository: RandomCardRepositoryProtocol {
             ScryfallClient().getRandomCard { result in
                 switch result {
                 case .success(let card):
-                    promise(.success(MLCard(
-                        name: card.name,
-                        manaCost: card.manaCost,
-                        typeLine: card.typeLine,
-                        flavorText: card.flavorText,
-                        artist: card.artist,
-                        setName: card.setName)))
+                    promise(.success(MLCard(id: "\(card.id)",
+                                            cardImageUris: card.imageUris,
+                                            name:card.name.uppercased(),
+                                            manaCost: card.manaCost?.filtrarNumeros(),
+                                            typeLine: card.typeLine,
+                                            flavorText: card.flavorText,
+                                            artist: card.artist,
+                                            setName: card.setName
+                                           )))
                 case .failure:
                     promise(.success(nil))
                 }
