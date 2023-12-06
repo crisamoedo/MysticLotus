@@ -18,8 +18,6 @@ class SetDetailViewController : UIViewController {
     
     
     @IBOutlet weak var dataSetTable: UITableView!
-    @IBOutlet weak var setNameLabel: UILabel!
-    @IBOutlet weak var numberOfCardsLabel: UILabel!
     
     init() {
         super.init(nibName: "SelectedSetView", bundle: .main)
@@ -33,6 +31,8 @@ class SetDetailViewController : UIViewController {
         dataSetTable.register(UINib(nibName: "SetCardCell", bundle: .main), forCellReuseIdentifier: "SetCardCell")
         dataSetTable.delegate = self
         dataSetTable.dataSource = self
+        dataSetTable.reloadData()
+        viewModel?.getCards()
     }
 }
     // MARK: - SearchDataCardViewControllerProtocol
@@ -45,20 +45,19 @@ class SetDetailViewController : UIViewController {
     extension SetDetailViewController: UITableViewDataSource, UITableViewDelegate {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            dataCardDetailTitles.count
+            viewModel?.setDetail.count ?? 0
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cellData = dataSetTable.dequeueReusableCell(withIdentifier: "SetCardCell" , for : indexPath) as? SetCardCell
-            else {
+            guard let setListCards = dataSetTable.dequeueReusableCell(withIdentifier: "SetCardCell" , for : indexPath) as? SetCardCell,
+                  let card = viewModel?.setDetail[indexPath.row] else {
                 return UITableViewCell()
             }
-            //aquí irían los nombres de cada una de las cartas del set
-            cellData.setCardsName.text = dataCardDetailTitles[indexPath.row]
-            
-            return cellData
-            
-        
-        
+            setListCards.setCardsName.text = card.name
+           
+            return setListCards
     }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            viewModel?.didSelectSetCard(indexPath.row)
+        }
 }

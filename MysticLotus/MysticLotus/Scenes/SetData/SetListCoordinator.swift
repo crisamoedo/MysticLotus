@@ -40,7 +40,7 @@ class SetListCoordinator: SetListCoordinatorProtocol {
     }
     
     func goToSetDetail(with selectedSet: MLSet) {
-        let setDetailCoordinator = SetDetailCoordinator(navigationController: navigationController, set: selectedSet)
+        let setDetailCoordinator = SetDetailCoordinator(navigationController: navigationController)
                 setDetailCoordinator.start()
     }
 }

@@ -18,16 +18,16 @@ class SetDetailRepository: SetDetailRepositoryProtocol {
             ScryfallClient().searchCards(filters: [.set("")]) { result in
                 switch result {
                 case .success(let cards):
-                    let mappedCards = cards.data.map { card in
+                    let mappedSets = cards.data.map { card in
                         return MLCard(id: "\(card.id)", cardImageUris: card.imageUris,
                                       name: card.name,
-                                      manaCost: card.manaCost,
+                                      manaCost: card.manaCost?.filtrarNumeros(),
                                       typeLine: card.typeLine,
                                       flavorText: card.flavorText,
                                       artist: card.artist,
                                       setName: card.setName)
                     }
-                    promise(.success(mappedCards))
+                    promise(.success(mappedSets))
                 case .failure:
                     promise(.success([]))
                 }

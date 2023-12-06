@@ -12,13 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetDetailViewController" customModule="MysticLotus" customModuleProvider="target">
             <connections>
                 <outlet property="dataSetTable" destination="Vp3-Ym-nw2" id="tdq-IH-A4g"/>
-                <outlet property="numberOfCardsLabel" destination="hMD-ha-zl2" id="Pbj-mW-tRy"/>
-                <outlet property="releasedLabel" destination="fRX-nd-9Wa" id="XXp-es-V8B"/>
-                <outlet property="selectedSetListOfCardsTable" destination="Vp3-Ym-nw2" id="9c1-TT-xyf"/>
-                <outlet property="selectedSetNameLabel" destination="wpj-42-j9X" id="DgG-xw-wuw"/>
-                <outlet property="selectedSetNumberOfCardsLabel" destination="hMD-ha-zl2" id="Jjf-0f-vcY"/>
-                <outlet property="selectedSetReleasedLabel" destination="fRX-nd-9Wa" id="uIg-gp-8Zi"/>
-                <outlet property="setNameLabel" destination="wpj-42-j9X" id="Jke-Jw-m9R"/>
                 <outlet property="view" destination="tNj-XT-Upt" id="skB-6Z-E9Z"/>
             </connections>
         </placeholder>
@@ -27,42 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="sw1-98-dDG">
-                    <rect key="frame" x="0.0" y="79" width="393" height="131"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Name" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpj-42-j9X">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nº Cards" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMD-ha-zl2">
-                            <rect key="frame" x="0.0" y="55.33333333333335" width="393" height="20.333333333333336"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-nd-9Wa">
-                            <rect key="frame" x="0.0" y="110.66666666666666" width="393" height="20.333333333333343"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vp3-Ym-nw2">
-                    <rect key="frame" x="0.0" y="208" width="393" height="644"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vp3-Ym-nw2">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="J0B-qn-5em"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="sw1-98-dDG" firstAttribute="leading" secondItem="J0B-qn-5em" secondAttribute="leading" id="H3j-3s-0i6"/>
-                <constraint firstItem="sw1-98-dDG" firstAttribute="top" secondItem="J0B-qn-5em" secondAttribute="top" constant="20" id="T1F-pJ-aTV"/>
-                <constraint firstItem="J0B-qn-5em" firstAttribute="trailing" secondItem="sw1-98-dDG" secondAttribute="trailing" id="TEB-mb-bwu"/>
+                <constraint firstItem="Vp3-Ym-nw2" firstAttribute="leading" secondItem="J0B-qn-5em" secondAttribute="leading" id="DFX-qZ-zLh"/>
+                <constraint firstItem="Vp3-Ym-nw2" firstAttribute="top" secondItem="tNj-XT-Upt" secondAttribute="top" id="Wdj-2n-aql"/>
+                <constraint firstAttribute="bottom" secondItem="Vp3-Ym-nw2" secondAttribute="bottom" id="aIS-8B-Vvp"/>
+                <constraint firstItem="Vp3-Ym-nw2" firstAttribute="trailing" secondItem="J0B-qn-5em" secondAttribute="trailing" id="n6N-K7-1La"/>
             </constraints>
             <point key="canvasLocation" x="138.1679389312977" y="-264.08450704225356"/>
         </view>

@@ -15,11 +15,11 @@ protocol SetDetailCoordinatorProtocol {
 
 class SetDetailCoordinator: SetDetailCoordinatorProtocol {
     weak var navigationController: UINavigationController?
-    var set: MLSet
     
-    init(navigationController: UINavigationController?, set: MLSet) {
+    
+    init(navigationController: UINavigationController?) {
         self.navigationController = navigationController
-        self.set = set
+      
     }
     
     func start() {
@@ -35,8 +35,8 @@ class SetDetailCoordinator: SetDetailCoordinatorProtocol {
         setDetailViewController.viewModel = setDetailViewModel
         return setDetailViewController
     }
-    func goToCardDetail(with selectedSet: MLCard) {
-        let cardDetailCoordinator = CardDetailCoordinator(navigationController: navigationController, card: selectedSet)
+    func goToCardDetail(with selectedCard: MLCard) {
+        let cardDetailCoordinator = CardDetailCoordinator(navigationController: navigationController, card: selectedCard)
         cardDetailCoordinator.start()
     }
 }

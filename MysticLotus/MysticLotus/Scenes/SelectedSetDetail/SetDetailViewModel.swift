@@ -13,7 +13,7 @@ protocol SetDetailViewModelProtocol {
     var view: SetDetailViewControllerProtocol? {get}
     var setDetail: [MLCard] {get}
     func getCards()
-    func didSelectSetCard(_ selectedCardCardIndex: Int)
+    func didSelectSetCard(_ selectedSetCardIndex: Int)
 }
 
 class SetDetailViewModel: SetDetailViewModelProtocol {
@@ -33,11 +33,20 @@ class SetDetailViewModel: SetDetailViewModelProtocol {
         self.setDetailUseCase = setDetailUseCase
         self.view = view
     }
+    func getCards() {
+        setDetailUseCase?
+            .getCards()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] cards in
+                self?.setDetail = cards
+                self?.view?.reloadTable()
+            }.store(in: &cancellables)
+        
+    }
     func didSelectSetCard(_ selectedSetCardIndex: Int) {
         setDetailCoordinator
             .goToCardDetail(with: setDetail[selectedSetCardIndex])
     }
     
-    func getCards() {
-    }
+   
 }

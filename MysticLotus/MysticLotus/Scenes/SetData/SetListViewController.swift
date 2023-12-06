@@ -15,8 +15,6 @@ protocol SetListViewControllerProtocol {
 class SetListViewController : UIViewController {
     
     @IBOutlet weak var setListTable: UITableView!
-    @IBOutlet weak var numberOfCardsInSetLabel: UILabel!
-    @IBOutlet weak var setNameLabel: UILabel!
     var viewModel: SetListViewModelProtocol?
     
     init() {
@@ -32,8 +30,6 @@ class SetListViewController : UIViewController {
         setListTable
             .delegate = self
         setListTable.dataSource = self
-        setNameLabel.text = "Set name"
-        numberOfCardsInSetLabel.text = "Nº Cards"
         setListTable.reloadData()
         viewModel?.getSets()
     }
@@ -59,10 +55,8 @@ class SetListViewController : UIViewController {
             }
             //se está utilizando la celda modelo de DataCardCell para rellenar la tabla de sets
             setListData.typeDataLabel.text = set.name
-            setNameLabel.text = set.name
-            print(set.name)
             setListData.dataCardLabel.text =
-            "\(set.cardCount)"
+            "Nº cards: \(set.cardCount)"
             return setListData
         }
         
