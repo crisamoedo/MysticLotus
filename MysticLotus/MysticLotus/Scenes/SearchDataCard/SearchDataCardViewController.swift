@@ -41,6 +41,7 @@ class SearchDataCardViewController: UIViewController {
             return
         }
         viewModel?.didTapOnSearchCards(searchText: introducedText)
+        searchCardTF.resignFirstResponder()
     }
 }
 
@@ -70,3 +71,4 @@ extension SearchDataCardViewController: UITableViewDataSource, UITableViewDelega
         viewModel?.didSelectCard(indexPath.row)
     }
 }
+
